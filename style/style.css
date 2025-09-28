@@ -210,7 +210,7 @@ a {
 
 /* FOOTER */
 footer {
-  position: relative;
+  position: relative;     
   padding: 20px 100px;
   background: white;
 }
@@ -220,7 +220,7 @@ footer p {
 }
 
 footer .social {
-  position: absolute;
+  position: absolute;     
   bottom: 20px;
   right: 100px;
   display: flex;
@@ -339,7 +339,7 @@ footer .social a:hover {
     padding: 20px;
   }
 
-  /* Features (si existe) */
+
   .features {
     display: flex;
     flex-direction: column;
@@ -354,9 +354,20 @@ footer .social a:hover {
   }
 
   /* Footer */
+  @media (max-width: 768px) {
   footer {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
     text-align: center;
     gap: 10px;
   }
+
+  footer .social {
+    position:static;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;       
+  }
+}
 }
