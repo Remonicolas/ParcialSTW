@@ -1,0 +1,362 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Logo circular con texto BD */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-circle {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0000FF;
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  flex: 0 0 36px;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #060A24;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  position: relative;
+}
+
+.navbar .logo img {
+  width: 36px;
+  height: 36px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* HERO */
+.hero {
+  padding: 100px;
+}
+
+.hero h1 {
+  font-size: 64px;
+}
+
+.hero .tachado {
+  text-decoration: line-through;
+}
+
+.hero .descripcion {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #00F3BB;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0000FE;
+  color: #fff;
+}
+
+/* EPISODIOS */
+.episodios-section {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  color: #ffffff;
+  padding: 120px 20px;
+  text-align: left;
+  clip-path: polygon(0 80px, 100% 0, 100% calc(100% - 80px), 0 100%);
+}
+
+.episodios-section h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 48px;
+  margin-bottom: 40px;
+  margin-left: 200px;
+}
+
+.episodios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.episodios-grid iframe {
+  width: 100%;
+  height: 232px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+}
+
+/* NOSOTROS */
+.nosotros {
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+  transform: translateY(-20%);
+}
+
+.nosotros img {
+  width: 300px;
+  position: relative;
+  top: -60;
+  z-index: -2;
+}
+
+.nosotros .texto h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* ENTREVISTAS */
+.entrevistas {
+  padding: 100px;
+}
+
+.grid-invitadas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.grid-invitadas img {
+  width: 100%;
+}
+
+/* TÓPICOS */
+.topicos {
+  padding: 100px;
+  text-align: center;
+}
+
+.grid-topicos {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.grid-topicos div img {
+  width: 64px;
+  margin-bottom: 10px;
+}
+
+/* NOVEDADES */
+.novedades {
+  background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  color: white;
+  text-align: center;
+  padding: 100px;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+}
+
+.novedades h2 {
+  margin-bottom: 30px;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  padding: 20px 100px;
+  background: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .social {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  display: flex;
+  gap: 15px;
+}
+
+footer .social a {
+  font-size: 18px;
+  color: #060A24;
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  color: #00F3BB;
+}
+
+/* =========================
+   RESPONSIVE (Móviles)
+========================= */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #0000FF;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .navbar ul li a {
+  color: white;
+  }
+
+
+  /* Texto principal */
+  .hero h1 {
+    font-size: 28px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  /* Botones */
+  .btn {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Episodios */
+  .episodios-section h2 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .episodios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Nosotros */
+  .nosotros {
+    flex-direction: column;
+  }
+
+  /* Invitadas estelares */
+  .grid-invitadas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .grid-invitadas img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* Tópicos */
+  .topicos {
+    padding: 40px 15px;
+  }
+
+  .topicos h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .grid-topicos {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .grid-topicos div {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Features (si existe) */
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 15px;
+  }
+
+  .features div {
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
