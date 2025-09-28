@@ -1,11 +1,15 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Logo circular con texto BD */
+/* =========================
+   LOGO
+========================= */
 .logo {
   display: flex;
   align-items: center;
@@ -28,6 +32,9 @@
   flex: 0 0 36px;
 }
 
+/* =========================
+   BODY & LINKS
+========================= */
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: #060A24;
@@ -39,7 +46,9 @@ a {
   color: inherit;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -75,7 +84,9 @@ a {
   display: none;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   padding: 100px;
 }
@@ -108,7 +119,9 @@ a {
   color: #fff;
 }
 
-/* EPISODIOS */
+/* =========================
+   EPISODIOS
+========================= */
 .episodios-section {
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   color: #ffffff;
@@ -139,7 +152,9 @@ a {
   box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
 }
 
-/* NOSOTROS */
+/* =========================
+   NOSOTROS
+========================= */
 .nosotros {
   display: flex;
   align-items: center;
@@ -162,7 +177,9 @@ a {
   margin-bottom: 20px;
 }
 
-/* ENTREVISTAS */
+/* =========================
+   ENTREVISTAS
+========================= */
 .entrevistas {
   padding: 100px;
 }
@@ -177,7 +194,9 @@ a {
   width: 100%;
 }
 
-/* TÓPICOS */
+/* =========================
+   TÓPICOS
+========================= */
 .topicos {
   padding: 100px;
   text-align: center;
@@ -195,7 +214,9 @@ a {
   margin-bottom: 10px;
 }
 
-/* NOVEDADES */
+/* =========================
+   NOVEDADES
+========================= */
 .novedades {
   background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   color: white;
@@ -208,9 +229,11 @@ a {
   margin-bottom: 30px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
-  position: relative;     
+  position: relative;
   padding: 20px 100px;
   background: white;
 }
@@ -220,7 +243,7 @@ footer p {
 }
 
 footer .social {
-  position: absolute;     
+  position: absolute;
   bottom: 20px;
   right: 100px;
   display: flex;
@@ -238,18 +261,26 @@ footer .social a:hover {
 }
 
 /* =========================
-   RESPONSIVE (Móviles)
+   RESPONSIVE (MÓVILES)
 ========================= */
 @media (max-width: 768px) {
+
   /* NAVBAR */
   .navbar ul {
     display: none;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     background: #0000FF;
     position: absolute;
     top: 60px;
-    right: 20px;
-    padding: 20px;
+    left: 0;
+    width: 100%;
+    height: 50vh; /* media pantalla */
+    overflow-y: auto; /* scroll si hay muchos links */
+    padding: 20px 0;
+    gap: 20px;
+    z-index: 999;
   }
 
   #menu-toggle:checked + .menu-icon + .nav-links {
@@ -258,13 +289,16 @@ footer .social a:hover {
 
   .menu-icon {
     display: block;
+    position: relative;
+    z-index: 1000;
   }
+
   .navbar ul li a {
-  color: white;
+    color: white; /* solo en móvil */
+    font-size: 18px;
   }
 
-
-  /* Texto principal */
+  /* HERO */
   .hero h1 {
     font-size: 28px;
     text-align: center;
@@ -277,7 +311,7 @@ footer .social a:hover {
     padding: 0 15px;
   }
 
-  /* Botones */
+  /* BOTONES */
   .btn {
     display: block;
     width: 90%;
@@ -287,7 +321,7 @@ footer .social a:hover {
     text-align: center;
   }
 
-  /* Episodios */
+  /* EPISODIOS */
   .episodios-section h2 {
     margin-left: 0;
     text-align: center;
@@ -298,12 +332,12 @@ footer .social a:hover {
     grid-template-columns: 1fr;
   }
 
-  /* Nosotros */
+  /* NOSOTROS */
   .nosotros {
     flex-direction: column;
   }
 
-  /* Invitadas estelares */
+  /* ENTREVISTAS */
   .grid-invitadas {
     display: flex;
     flex-direction: column;
@@ -316,7 +350,7 @@ footer .social a:hover {
     border-radius: 12px;
   }
 
-  /* Tópicos */
+  /* TÓPICOS */
   .topicos {
     padding: 40px 15px;
   }
@@ -339,7 +373,7 @@ footer .social a:hover {
     padding: 20px;
   }
 
-
+  /* FEATURES */
   .features {
     display: flex;
     flex-direction: column;
@@ -353,21 +387,19 @@ footer .social a:hover {
     padding: 15px;
   }
 
-  /* Footer */
-  @media (max-width: 768px) {
+  /* FOOTER MÓVIL */
   footer {
     display: flex;
-    flex-direction: column; 
-    align-items: center;  
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 10px;
   }
 
   footer .social {
-    position:static;
+    position: static;
     display: flex;
     justify-content: center;
-    margin-top: 10px;       
+    margin-top: 10px;
   }
-}
 }
