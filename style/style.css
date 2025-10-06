@@ -319,10 +319,10 @@ footer .social a:hover {
   /* BOTONES */
   .btn {
      display: block;
-    width: 100%;        /* ancho dentro del contenedor */
-    max-width: 400px;  /* opcional: evita que sea enorme en tablets grandes */
-    margin: 20px auto; /* centrado horizontal */
-    font-size: 18px;   /* ajusta tamaño para móviles */
+    width: 100%;        /* ancho  */
+    max-width: 400px;  
+    margin: 20px auto; 
+    font-size: 18px;  
     padding: 15px 20px;
     text-align: center;
     border-radius: 6px;
