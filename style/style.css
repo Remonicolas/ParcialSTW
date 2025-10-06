@@ -153,8 +153,8 @@ a {
   height: 232px;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
-  border: none;       /* reemplaza frameborder */
-  background: transparent; /* reemplaza allowtransparency */
+  border: none;     
+  background: transparent; 
 }
 
 /* =========================
@@ -266,7 +266,7 @@ footer .social a:hover {
 }
 
 /* =========================
-   RESPONSIVE (MÓVILES)
+   RESPONSIVE (MÓVIL)
 ========================= */
 @media (max-width: 768px) {
 
@@ -343,16 +343,16 @@ footer .social a:hover {
   /* NOSOTROS */
   .nosotros {
     flex-direction: column;
-    transform: none;      /* desactivamos translateY */
-    padding: 50px 15px;   /* reducimos padding para móviles */
+    transform: none;     
+    padding: 50px 15px;   
     gap: 20px;
   }
 
   .nosotros img {
-    width: 120%;           /* ajustamos tamaño de la imagen */
+    width: 120%;           /* Ojo tamaño imagen */
     max-width: 300px;
     margin-top: -50px;
-    position: relative;     /* quitamos position relativo */
+    position: relative;     
     top: -10;
     z-index: 3;
   }
